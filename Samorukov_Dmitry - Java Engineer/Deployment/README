@@ -1,0 +1,21 @@
+Instruction for deployment and testing an application
+
+1. You have to create a database, using SQL a script from the SQL folder at the parental level
+
+2. You need to set your database params inside 'backend.war/WEB-INF/classes/backend.properties' file. Default params is:
+dataSource.url=jdbc:mysql://localhost:3306/backend
+dataSource.username=root
+dataSource.password=root
+
+3. Put backend.war in your Tomcat webapps directory, for example
+/srv/apache-tomcat-8.0.22/webapps/
+
+4. Run Tomcar server, after start application will be deployed to address 
+http://localhost:8080/backend
+and REST api can be available by url http://localhost:8080/backend/api
+
+5. If you have not standart Tomcat port, you must change it inside 'frontend.jar/frontend.properties' file.
+
+6. To start frontend use command 'java -jar frontend.jar'
+
+That's all.
